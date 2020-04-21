@@ -4,13 +4,11 @@ This repo contains an small example application that shows how to connect to a D
 
 ## Using the Node.js app: 
 
-     $ npm install
-     $ app.js <server> <port> <schema> <user> <password>
+     $ node app.js <server> <port> <schema> <user> <password>
 
      example:
 
-     $ npm install
-     $ app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
+     $ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
 
 ## Building the Node.js App: 
 
@@ -42,5 +40,13 @@ This repo contains an small example application that shows how to connect to a D
                                                       passenger_count               passenger_count
                                                       trip_distance_mi              trip_distance_mi
    
-### QUESTIONS/COMMENTS: Direct questions or comments to greg@dremio.com
+    5. Compile and run the app.js source file:
+
+       $ npm install
+       $ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
+
+
+### QUESTIONS/COMMENTS: 
+
+     Direct questions or comments to greg@dremio.com
 
