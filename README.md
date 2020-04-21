@@ -39,6 +39,7 @@ This repo contains an small example application that shows how to connect to a D
        Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
    
             Dimension                                 Measure COUNT                  Measure SUM
+            ---------------------                     -----------------------        -----------------------
    
             pickup_datetime                           pickup_datetime	
 
