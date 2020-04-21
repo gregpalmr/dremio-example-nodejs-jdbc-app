@@ -7,7 +7,7 @@ This repo contains an small example application that shows how to connect to a D
      $ git clone https://github.com/gregpalmr/dremio-example-nodejs-jdbc-app
      $ cd dremio-example-nodejs-jdbc-app
 
-## Runn the example Dremio Node.js application: 
+## Run the example Dremio Node.js application: 
 
      $ node app.js <server> <port> <schema> <user> <password>
 
