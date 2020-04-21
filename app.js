@@ -10,7 +10,7 @@
 //        example:
 //
 //        npm install
-//        node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
+//        node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
 //
 // NOTES: 
 //    1. Before running this app, install the Node.js and the node package manager (npm):
@@ -29,17 +29,16 @@
 //        Copy the Dremio JDBC driver jar file to ./drivers
 //
 //	  3. This app queries the Dremio samples data source named Samples."samples.dremio.com"."NYC-taxi-trips". 
-//       However, you must first create a Dremio Virtual Data Source (VDS) object that points to the data source
-//	     And implements a raw reflection containing all columns and an aggregation reflection on the following columns:
+//        However, you must first create a Dremio Virtual Data Source (VDS) object that points to the data source
+//	  And implements a raw reflection containing all columns and an aggregation reflection on the following columns:
 //
-//       Dremio aggregation reflection definition for VDS "NYC_TRIPS":
+//        Dremio aggregation reflection definition for VDS "NYC_TRIPS":
 //
-//		    Dimension		              Measure COUNT		            Measure SUM
-//
-//		    pickup_datetime		
-//					                      pickup_datetime	
-//					                      passenger_count		            passenger_count
-//					                      trip_distance_mi	            trip_distance_mi
+//                  Dimension                                Measure COUNT                  Measure SUM
+//                  -----------------------                  -----------------------        -------------------------
+//		    pickup_datetime                          pickup_datetime	
+//                  passenger_count                          passenger_count
+//                                                           trip_distance_mi               trip_distance_mi
 //
 // QUESTIONS/COMMENTS: Direct questions or comments to greg@dremio.com
 //
