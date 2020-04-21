@@ -13,7 +13,7 @@ This repo contains an small example application that shows how to connect to a D
 
      example:
 
-     $ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
+     $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
 
 ## Build the example Dremio Node.js application: 
 
@@ -49,15 +49,15 @@ This repo contains an small example application that shows how to connect to a D
     5. Compile and run the app.js source file:
 
        $ npm install
-       $ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
+       $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
 
 ## Example output
 
-	$ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<gregs password>'
+	$ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<gregs password>'
 
 	 - Pulling connection from the JDBC connection pool
 	 - Using JDBC connection: 13ae3cc8-c66e-4d60-846c-e68c72d3c767
-	 - SUCCESS executing SQL Command: SELECT * FROM Business.Transportation."NYC Trips" LIMIT 12000
+	 - SUCCESS executing SQL Command: SELECT * FROM "@greg@dremio.com"."NYC Trips" LIMIT 12000
 	 - Dremio Server Query Time: 0.734 seconds
 
 	pickup_datetime           | passenger_count          
