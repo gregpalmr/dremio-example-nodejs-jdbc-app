@@ -51,6 +51,44 @@ This repo contains an small example application that shows how to connect to a D
        $ npm install
        $ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<password>'
 
+## Example output
+
+	$ node app.js dremio.org 31010 'Business.Transportation' 'greg@dremio.com' '<gregs password>'
+
+	 - Pulling connection from the JDBC connection pool
+	 - Using JDBC connection: 13ae3cc8-c66e-4d60-846c-e68c72d3c767
+	 - SUCCESS executing SQL Command: SELECT * FROM Business.Transportation."NYC Trips" LIMIT 12000
+	 - Dremio Server Query Time: 0.734 seconds
+
+	pickup_datetime           | passenger_count          
+	------------------------- | -------------------------
+	2012-04-30 08:36:20.0     | 1                        
+	2012-04-30 08:27:28.0     | 1                        
+	2012-04-30 08:36:44.0     | 1                        
+	2012-04-30 08:44:59.0     | 1                        
+	2012-04-30 08:43:55.0     | 1                        
+	2012-04-30 08:45:35.0     | 1                        
+	2012-04-30 08:31:39.0     | 1                        
+	2012-04-30 08:35:59.0     | 1                        
+	2012-04-30 08:30:17.0     | 1                        
+	2012-04-30 08:36:49.0     | 1                        
+	2012-04-30 08:46:58.0     | 1                        
+	2012-04-30 08:31:28.0     | 1                        
+	2012-04-30 19:35:31.0     | 1                        
+	2012-04-30 08:26:39.0     | 1                        
+	2012-04-30 08:33:01.0     | 1                        
+	2012-04-30 08:43:38.0     | 1                        
+	2012-04-30 08:31:37.0     | 1                        
+	2012-04-30 08:27:10.0     | 3                        
+	2012-04-30 08:30:56.0     | 2                        
+	2012-04-30 08:35:24.0     | 1                        
+
+	... skipping remainder of rows ...
+
+	Total records transferred from Dremio server: 12000 - transferred in 7.805 seconds 
+
+	 - Returning connection to JDBC connection pool
+
 
 ### QUESTIONS/COMMENTS: 
 
