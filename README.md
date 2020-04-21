@@ -40,12 +40,11 @@ This repo contains an small example application that shows how to connect to a D
    
             Dimension                                 Measure COUNT                  Measure SUM
             ---------------------                     -----------------------        -----------------------
-   
             pickup_datetime                           pickup_datetime	
 
-                                                      passenger_count               passenger_count
+                                                      passenger_count                passenger_count
 
-                                                      trip_distance_mi              trip_distance_mi
+                                                      trip_distance_mi               trip_distance_mi
 
     5. Compile and run the app.js source file:
 
