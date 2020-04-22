@@ -121,6 +121,7 @@ You will create a Dremio VDS object that contains a raw reflection containing al
      Download the Dremio JDBC driver installer from https://www.dremio.com/drivers/
 
      Copy the Dremio JDBC driver jar file the ./drivers directory under this application's home directory
+
      $ mv ~/Downloads/dremio-jdbc-driver-4.2.1-202004111451200819-0c3ecaea.jar ./drivers/
    
 ### d. Compile and run the app.js source file:
