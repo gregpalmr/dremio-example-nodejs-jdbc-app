@@ -1,6 +1,6 @@
 # Dremio Example Node.js JDBC Application
 
-This repo contains an small example application that shows how to connect to a Dremio server from a Node.js command line application.
+This repo contains an example application that shows how to connect to a Dremio Data Lake Engine server from a Node.js command line application.
 
 ## Step 1. Use this repo
 
