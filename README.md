@@ -27,21 +27,21 @@ Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
 
 ### 1. Start the open source version of Dremio on your computers (requires Docker desktop to be installed)
 
-    #### Pull down the latest docker image
+    Pull down the latest docker image
 
          $ docker pull dremio/dremio_oss:latest
 
-    #### Run the docker image (increase the default max memory to 6 GB)
+    Run the docker image (increase the default max memory to 6 GB)
 
          $ docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss:latest
 
-    #### When Dremio has completed its start up process, point your web browser to: 
+    When Dremio has completed its start up process, point your web browser to: 
 
          http://localhost:9047
 
-    #### Register your first user (the admin user)
+    Register your first user (the admin user)
 
-    #### Add a new space in Dremio
+    Add a new space in Dremio
 
 - Click on the "Add Space" button to create a new space (folder)
 
