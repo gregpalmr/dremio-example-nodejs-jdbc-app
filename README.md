@@ -178,5 +178,5 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
 ### QUESTIONS/COMMENTS: 
 
-     Direct questions or comments to greg@dremio.com
+- Direct questions or comments to greg@dremio.com
 
