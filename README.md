@@ -7,31 +7,31 @@ This repo contains an small example application that shows how to connect to a D
      $ git clone https://github.com/gregpalmr/dremio-example-nodejs-jdbc-app
      $ cd dremio-example-nodejs-jdbc-app
 
-## Step 2. Create the sample Dremio data source (NYC Taxi Rides)
+## Step 2. Create the sample Dremio data source (NYC Taxi Trips)
 
-This example Node.js application queries a sample Dremio data source called the NYC Taxi Ride data. By default, the sample data sources in Dremio are not pre-staged and therefore, the target data source must be setup. This section provides the steps to setup the NYC Taxi Rides data source in Dremio.
+This example Node.js application queries a sample Dremio data source called NYC Taxi Trips data. By default, the sample data sources in Dremio are not pre-staged and therefore, the target data source must be setup. This section provides the steps to setup the NYC Taxi Trips data source in Dremio.
 
 As an overview, you will be creating a virtual data source (VDS) based on the physical data source (PDS) named "Samples"."samples.dremio.com"."NYC-taxi-trips". 
 
-You will create a Dremio VDS object that points to the physical data source and that builds a raw reflection containing all columns and an aggregation reflection on the following columns:
+You will create a Dremio VDS object that contains a raw reflection containing all the columns and an aggregation reflection on the following columns:
    
-Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
+     Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
    
-      Dimension                       Measure COUNT                  Measure SUM
-      ---------------------           -----------------------        -----------------------
-      pickup_datetime                 pickup_datetime	
+         Dimension                       Measure COUNT                  Measure SUM
+         ---------------------           -----------------------        -----------------------
+         pickup_datetime                 pickup_datetime	
 
-                                      passenger_count                passenger_count
+                                         passenger_count                passenger_count
 
-                                      trip_distance_mi               trip_distance_mi
+                                         trip_distance_mi               trip_distance_mi
 
 ### a. Start the open source version of Dremio on your computer (requires Docker desktop to be installed)
 
-    - Pull down the latest docker image
+- Pull down the latest docker image
 
          $ docker pull dremio/dremio_oss:latest
 
-    - Run the docker image (increase the default max memory to 6 GB)
+    - Run the docker image 
 
          $ docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss:latest
 
