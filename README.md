@@ -31,78 +31,78 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
          $ docker pull dremio/dremio_oss:latest
 
-    - Run the docker image 
+- Run the docker image 
 
          $ docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss:latest
 
-    - When Dremio has completed its start up process, point your web browser to: 
+- When Dremio has completed its start up process, point your web browser to: 
 
          http://localhost:9047
 
-    - Register your first user (the admin user)
+- Register your first user (the admin user)
 
 ### b. Add a new Dremio space
 
-     - Click on the "Add Space" button to create a new space (folder)
+- Click on the "Add Space" button to create a new space (folder)
 
-     - Name the new space "NYC-Taxi" and click on the "Save" button.
+- Name the new space "NYC-Taxi" and click on the "Save" button.
 
 ### c. Add the sample data sources in Dremio
 
-     - Click on the "Add Sample Source" button to add "NYC-taxi-trips" sample data. 
+- Click on the "Add Sample Source" button to add "NYC-taxi-trips" sample data. 
      This data set contains over a billion rows of NYC Taxi ride data from 2009 to 2015.
 
-     - Click on the "Samples" link under the "Sources" section on the left.
+- Click on the "Samples" link under the "Sources" section on the left.
 
 ### d. Create a new Virtual Data Source or VDS for the NYC taxi trips
 
-     - Click on the "sample.dremio.com" source group 
+- Click on the "sample.dremio.com" source group 
 
-     - On the "NYX-taxi-trips" data source line, hover your mouse over the Action column to display the popup action represented by a [folder > format folder] icon. Click on that popup icon.
+- On the "NYX-taxi-trips" data source line, hover your mouse over the Action column to display the popup action represented by a [folder > format folder] icon. Click on that popup icon.
 
-     - After some taxi ride records are displayed, click on the "Save" button
+- After some taxi ride records are displayed, click on the "Save" button
 
-     - Now save this new VDS into the new space created above.  Click on the down arrow next to the floppy disk icon on the upper right, and select the "Save As" option.
+- Now save this new VDS into the new space created above.  Click on the down arrow next to the floppy disk icon on the upper right, and select the "Save As" option.
 
-     - In the "Save Dataset As" window, enter the name "trips" and click on the "NYX-Taxi" space.
+- In the "Save Dataset As" window, enter the name "trips" and click on the "NYX-Taxi" space.
 
-     - Click on the "Save" button to save this new VDS in the new space.
+- Click on the "Save" button to save this new VDS in the new space.
 
-     - View the new VDS by clicking on the Dremio logo on the upper left of the page and then clicking on the "NYC-Taxi" space under the Spaces section.
+- View the new VDS by clicking on the Dremio logo on the upper left of the page and then clicking on the "NYC-Taxi" space under the Spaces section.
 
 ### e. Add reflections to this VDS, to improve query performance.
 
-     - In the "NYC-Taxi" space, click on the "trips" VDS, this will bring up a new "SQL Editor" window.
+- In the "NYC-Taxi" space, click on the "trips" VDS, this will bring up a new "SQL Editor" window.
 
-     - Click on the "Reflections" link at the top of the window.
+- Click on the "Reflections" link at the top of the window.
 
-     - Click on the "Switch to Advanced" button on the upper right of the window.
+- Click on the "Switch to Advanced" button on the upper right of the window.
 
-     - In the "Raw Reflections" tab, click on the "Raw Reflections" toggle button to enable raw reflections.
+- In the "Raw Reflections" tab, click on the "Raw Reflections" toggle button to enable raw reflections.
 
-     - By default, all the columns in the VDS will be included in the raw reflection. Keep those settings.
+- By default, all the columns in the VDS will be included in the raw reflection. Keep those settings.
 
-     - Click on the "Aggregation Reflections" tab.
+- Click on the "Aggregation Reflections" tab.
 
-     - Click on the "Aggregation Reflections" toggle button to enable aggregation reflections.
+- Click on the "Aggregation Reflections" toggle button to enable aggregation reflections.
 
-     - By default, the date and integer typed columns will be flagged as dimensions and the float typed columns will be flagged as measures.
+- By default, the date and integer typed columns will be flagged as dimensions and the float typed columns will be flagged as measures.
 
-     - Add  a new Aggregation reflection for the pickup date time measure.
+- Add  a new Aggregation reflection for the pickup date time measure.
 
-     - Click the "New Rflection" button on the upper right of the window.
+- Click the "New Rflection" button on the upper right of the window.
 
-     - Change the default name of the reflection, "Aggregation Reflection (1)", with the name "Pickup_Date_Pass_Count".
+- Change the default name of the reflection, "Aggregation Reflection (1)", with the name "Pickup_Date_Pass_Count".
 
-     - Click on the "Dimension" cell for the "pickup_datetime" column.
+- Click on the "Dimension" cell for the "pickup_datetime" column.
 
-     - Click on the "Measure" cell for the "pickup_datetime" and "passenger_count" columns.
+- Click on the "Measure" cell for the "pickup_datetime" and "passenger_count" columns.
 
-     - For the "pickup_datetime" measure, click on the down arrow icon to display the aggregation types. Uncheck the "SUM" type and leave only the "COUNT" type.
+- For the "pickup_datetime" measure, click on the down arrow icon to display the aggregation types. Uncheck the "SUM" type and leave only the "COUNT" type.
 
-     - Click on the "Save" button.
+- Click on the "Save" button.
 
-     - Now save this new VDS into the new space created above.  Click on the down arrow next to the floppy disk icon on the upper right, and select the "Save As" option.
+- Now save this new VDS into the new space created above.  Click on the down arrow next to the floppy disk icon on the upper right, and select the "Save As" option.
 
 ## Step 3. Build the example Dremio Node.js application: 
 
@@ -148,7 +148,7 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
      $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
 
-     - Example output
+- Example output
 
 	$ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<gregs password>'
 
