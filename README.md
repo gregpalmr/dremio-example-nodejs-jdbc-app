@@ -2,12 +2,12 @@
 
 This repo contains an small example application that shows how to connect to a Dremio server from a Node.js command line application.
 
-## Use this repo
+## Step 1. Use this repo
 
      $ git clone https://github.com/gregpalmr/dremio-example-nodejs-jdbc-app
      $ cd dremio-example-nodejs-jdbc-app
 
-## Create the sample Dremio data source (NYC Taxi Rides)
+## Step 2. Create the sample Dremio data source (NYC Taxi Rides)
 
 This example Node.js application queries a sample Dremio data source called the NYC Taxi Ride data. By default, the sample data sources in Dremio are not pre-staged and therefore, the target data source must be setup. This section provides the steps to setup the NYC Taxi Rides data source in Dremio.
 
@@ -25,9 +25,9 @@ Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
 
                                       trip_distance_mi               trip_distance_mi
 
-### 1. Start the open source version of Dremio on your computers (requires Docker desktop to be installed)
+### a. Start the open source version of Dremio on your computers (requires Docker desktop to be installed)
 
-    Pull down the latest docker image
+     Pull down the latest docker image
 
          $ docker pull dremio/dremio_oss:latest
 
@@ -43,14 +43,16 @@ Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
 
     Add a new space in Dremio
 
-- Click on the "Add Space" button to create a new space (folder)
+### b. Add a new Dremio space
 
-- Name the new space "NYC-Taxi" and click on the "Save" button.
+     Click on the "Add Space" button to create a new space (folder)
+
+     Name the new space "NYC-Taxi" and click on the "Save" button.
 
 
-# Add the sample data sources in Dremio
+### c. Add the sample data sources in Dremio
 
-- Click on the "Add Sample Source" button to add "NYC-taxi-trips" sample data. This data set contains over a billion rows of NYC Taxi ride data from 2009 to 2015.
+     Click on the "Add Sample Source" button to add "NYC-taxi-trips" sample data. This data set contains over a billion rows of NYC Taxi ride data from 2009 to 2015.
 
 - Click on the "Samples" link under the "Sources" section on the left.
 
