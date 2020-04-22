@@ -106,39 +106,25 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
 ## Step 3. Build the example Dremio Node.js application: 
 
-    1. Before running this app, install Node.js and the node package manager (npm):
+### a. Install Node.js and the node package manager (npm):
    
-       Download and install Node.js from https://nodejs.org/en/ 
+     Download and install Node.js from https://nodejs.org/en/ 
 
-    2. Before running this app, install the required Node.js packages:
+### b. Install the required Node.js packages:
    
-       $ npm install --save java
-       $ npm install --save jdbc
-       $ npm install --save async
+     $ npm install --save java
+     $ npm install --save jdbc
+     $ npm install --save async
    
-    3. Before running this app, download and install the Dremio JDBC driver: 
+### c. Download and install the Dremio JDBC driver: 
    
-       Download the Dremio JDBC driver installer from https://www.dremio.com/drivers/
-       Copy the Dremio JDBC driver jar file the ./drivers directory under this application's home directory
+     Download the Dremio JDBC driver installer from https://www.dremio.com/drivers/
+     Copy the Dremio JDBC driver jar file the ./drivers directory under this application's home directory
    
-    4. This app queries the Dremio samples data source named Samples."samples.dremio.com"."NYC-taxi-trips". 
-       However, you must first create a Dremio Virtual Data Source (VDS) object that points to the data source
-       and that builds a raw reflection containing all columns and an aggregation reflection on the following columns:
-   
-       Dremio aggregation reflection definition for the new VDS "NYC TRIPS":
-   
-            Dimension                                 Measure COUNT                  Measure SUM
-            ---------------------                     -----------------------        -----------------------
-            pickup_datetime                           pickup_datetime	
+### d. Compile and run the app.js source file:
 
-                                                      passenger_count                passenger_count
-
-                                                      trip_distance_mi               trip_distance_mi
-
-    5. Compile and run the app.js source file:
-
-       $ npm install
-       $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
+     $ npm install
+     $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<password>'
 
 ## Step 4. Run the example Dremio Node.js application: 
 
