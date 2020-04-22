@@ -138,6 +138,7 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
 - Example output
 
+```
      $ node app.js dremio.org 31010 '@greg@dremio.com' 'greg@dremio.com' '<gregs password>'
 
      - Pulling connection from the JDBC connection pool
@@ -173,7 +174,7 @@ You will create a Dremio VDS object that contains a raw reflection containing al
      Total records transferred from Dremio server: 12000 - transferred in 7.805 seconds 
 
      - Returning connection to JDBC connection pool
-
+```
 
 ### QUESTIONS/COMMENTS: 
 
