@@ -29,15 +29,15 @@ You will create a Dremio VDS object that contains a raw reflection containing al
 
 - Pull down the latest docker image
 
-         $ docker pull dremio/dremio_oss:latest
+     $ docker pull dremio/dremio_oss:latest
 
 - Run the docker image 
 
-         $ docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss:latest
+     $ docker run -p 9047:9047 -p 31010:31010 -p 45678:45678 dremio/dremio-oss:latest
 
 - When Dremio has completed its start up process, point your web browser to: 
 
-         http://localhost:9047
+     http://localhost:9047
 
 - Register your first user (the admin user)
 
